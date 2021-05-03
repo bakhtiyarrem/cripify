@@ -1,0 +1,270 @@
+.burger-wrapper,
+.mobile-phone_wrapper {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: -100vw;
+  // left: 0;
+  top: 0;
+  position: fixed;
+  background: #1f242a;
+  z-index: 3;
+  transition: 0.4s;
+  padding-top: 20vh;
+  text-align: center;
+  &.active {
+    left: 0;
+    transition: 0.4s;
+  }
+
+  &.active {
+    left: 0;
+    transition: 0.4s;
+  }
+  &__item {
+    a {
+      font-size: 20px;
+      color: inherit;
+    }
+    &_reg {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 10vh;
+    }
+
+    height: 10vh;
+    width: 100%;
+  }
+}
+
+.burger {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  margin-top: 5px;
+  z-index: 4;
+  &.active {
+    &::after {
+      width: 100%;
+      transition: 0.2s;
+      transform: rotate(-45deg);
+      bottom: 7px;
+    }
+    &::before {
+      width: 100%;
+      transition: 0.2s;
+      transform: rotate(45deg);
+      top: 7px;
+    }
+    span {
+      transform: scale(0);
+    }
+  }
+  &::after,
+  &::before {
+    transition: 0.2s;
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    height: 2px;
+    right: 0;
+    border-radius: 10px;
+  }
+  &::before {
+    top: 0;
+    width: 19px;
+  }
+  &::after {
+    bottom: 0;
+    width: 12px;
+  }
+  span {
+    content: "";
+    background-color: #fff;
+    transition: 0.4s;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    right: 0;
+    bottom: 7px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px),
+  only screen and (max-device-width: 768px) {
+  .nav__wrapper,
+  .main-phone,
+  .bitcoin_1,
+  .bitcoin_2,
+  .ellipse {
+    display: none;
+  }
+  .container {
+    overflow: hidden;
+  }
+
+  .burger-wrapper,
+  .mobile-menu,
+  .mobile-phone_wrapper,
+  .bitcoin_mobile {
+    display: block;
+  }
+  .main-text__free-reg {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .bitcoin_mobile {
+    position: absolute;
+    width: 48.13px;
+    height: 48.13px;
+    transform: rotate(35deg);
+    right: 30px;
+    top: 40px;
+  }
+
+  .register__form button {
+    margin-left: 5%;
+  }
+
+  .gradient-button {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mobile-phone_wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .main-text {
+    &__headline {
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 55px;
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 120.3%;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 144%;
+    }
+  }
+  .register {
+    border-radius: 0;
+    margin-top: 60px;
+    padding-top: 0;
+    &__container {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    form {
+      width: 90%;
+      margin-left: 5%;
+    }
+    &__headline {
+      font-size: 22px;
+    }
+    &__title {
+      font-size: 22px;
+      line-height: 27px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 144%;
+    }
+    button {
+      width: 90%;
+    }
+    &__form_wrapper {
+      order: 2;
+    }
+  }
+  .how-work__item {
+    margin-top: 40px;
+  }
+  .how-work__text {
+    padding: 14px;
+    padding-top: 0;
+  }
+  .service__item {
+    margin-top: 30px;
+  }
+  .cards {
+    display: none;
+  }
+  .for-partners {
+    &__send-quest {
+      padding: 30px 15px;
+    }
+    &__container {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      border-radius: 0;
+      .bg-gradient {
+        border-radius: 0;
+      }
+    }
+  }
+  .header {
+    position: fixed;
+    background: #1f242a;
+  }
+  .my-modal-phone {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #1f242a;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 22.0401px;
+      z-index: -1;
+    }
+    .gradient-button {
+      z-index: 5;
+      margin-top: 5vh;
+    }
+    &_img {
+      margin-top: 100px;
+      width: 90vw;
+      margin-left: 5vw;
+      height: 65vh;
+    }
+  }
+  .mobile-form {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+    background: #1f242a;
+    padding-top: 50px;
+    .register__form {
+      background: none;
+      box-shadow: none;
+      padding: 20px 10px;
+      button {
+        width: 90%;
+      }
+    }
+  }
+}
